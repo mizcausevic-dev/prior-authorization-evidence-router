@@ -1,5 +1,10 @@
 # Prior Authorization Evidence Router
 
+[![CI](https://github.com/mizcausevic-dev/prior-authorization-evidence-router/actions/workflows/ci.yml/badge.svg)](https://github.com/mizcausevic-dev/prior-authorization-evidence-router/actions/workflows/ci.yml)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](./LICENSE)
+[![Dependabot](https://img.shields.io/badge/dependabot-enabled-025E8C?logo=dependabot&logoColor=white)](./.github/dependabot.yml)
+[![Deploy](https://github.com/mizcausevic-dev/prior-authorization-evidence-router/actions/workflows/pages.yml/badge.svg)](https://github.com/mizcausevic-dev/prior-authorization-evidence-router/actions/workflows/pages.yml)
+
 TypeScript control plane for prior-authorization intake, evidence routing, payer-rule pressure, and approval-safe escalation across healthcare workflows.
 
 ## Why this exists
@@ -60,6 +65,19 @@ Open:
 - `npm run demo`
 - `npm run smoke`
 - `npm run render:assets`
+
+## Production status
+
+<!-- Maintained by Claude Code (Platform/SRE lane) after v1.0-prod hardening. -->
+
+| Aspect | Status |
+|--------|--------|
+| CI | Node 20 + 22 matrix — lint · typecheck · coverage · build · demo · smoke · `npm audit` ([workflow](./.github/workflows/ci.yml)) |
+| Test coverage | 100% statements on `src/services/` (gate: ≥ 60%); synthetic, non-PHI fixtures only |
+| License | [AGPL-3.0-or-later](./LICENSE) |
+| Dependencies | Dependabot weekly (npm + GitHub Actions); `npm audit --audit-level=high` in CI |
+| Compliance | **HIPAA-readiness scaffolding only — not HIPAA/SOC 2/BAA compliant.** See [SECURITY.md](./SECURITY.md). Do not deploy with real PHI. |
+| Deploy | Static prerender → **https://priorauth.kineticgain.com/** (GitHub Pages, [pages workflow](./.github/workflows/pages.yml)) |
 
 ## Docs
 
