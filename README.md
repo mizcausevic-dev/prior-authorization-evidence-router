@@ -18,6 +18,29 @@ TypeScript control plane for prior-authorization intake, evidence routing, payer
 
 This repo demonstrates the evidence-routing primitive for Digital Health / MedTech buyers: intake cases tied to payer rules, evidence gaps, approval blockers, and owner-safe escalation paths. A B2B SaaS buyer would care because healthcare approvals and denials often need to surface inside customer-facing operator tools without exposing PHI-heavy systems or unsafe write paths. Kinetic Gain Embedded extends this into security-first in-product analytics for approval-aware and evidence-aware reporting across care delivery and revenue operations, see [kineticgain.com/embedded](https://kineticgain.com/embedded).
 
+## Product depth
+
+Prior Authorization Evidence Router turns payer-rule ambiguity into an approval-safe decision packet.
+
+- **For non-technical leaders:** shows which approvals are exposed, what reimbursement or patient-access risk is building, and who owns the next move.
+- **For technical and ops teams:** frames the data contract across intake cases, evidence lane, payer rules, approval posture, owners, SLA pressure, and verification gates.
+- **For GTM and product teams:** makes the commercial story concrete: reduced denial exposure, faster packet repair, and safer embedded approval workflows without live PHI.
+
+## What these repos have in common
+
+The Kinetic Gain proof surfaces follow the same operating pattern: **risk, owner, proof, next action**.
+
+- Risk is visible instead of buried in a generic dashboard.
+- Ownership is explicit so leaders know who can close the gap.
+- Proof is packaged with representative, synthetic data that can be reviewed without exposing sensitive systems.
+- The output is board-readable: what changed, why it matters, what to do next, and what remains unresolved.
+
+## Operating workflow
+
+1. Model the approval lane: case context, payer, service line, owner, urgency, and approval audience.
+2. Map rule to evidence: payer requirement, target packet, blocker, and proof owner.
+3. Route the decision: escalate the approvals most likely to become denial, reimbursement, or patient-access risk.
+
 ## Routes
 
 - `/`
